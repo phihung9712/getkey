@@ -1,0 +1,18 @@
+(set /p = FREE_c669a12f229db9fe5de051e4e80d002d) < nul > %userprofile%\Desktop\license
+@echo off
+echo Dang day file den tat ca cac tab dang chay...
+
+:: Thay doi duong dan file va dich den tai day
+set "FILE_PATH=%userprofile%\Desktop\license"
+set "DEST_PATH=/sdcard/Delta/Internals/Cache/"
+
+for %%i in (16384 16416 16448 16480 16512 16544 16576 16608 16640 16672 16704 16736 16768 16800 16832 16864 16896 16928 16960 16992 17024 17056 17088 17120 17152 17184 17216) do (
+    echo Dang ket noi den 127.0.0.1:%%i...
+    adb connect 127.0.0.1:%%i
+    echo Dang day file den tab %%i...
+    adb -s 127.0.0.1:%%i push "%FILE_PATH%" "%DEST_PATH%"
+)
+timeout 5
+del %userprofile%\Desktop\license
+echo Hoan tat!
+exit
