@@ -1,4 +1,4 @@
-(set /p = FREE_c669a12f229db9fe5de051e4e80d002d) < nul > %userprofile%\Desktop\license
+<nul set /p ="FREE_c669a12f229db9fe5de051e4e80d002d" > "%userprofile%\Desktop\license"
 @echo off
 echo Dang day file den tat ca cac tab dang chay...
 
